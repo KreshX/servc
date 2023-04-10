@@ -1,0 +1,27 @@
+{%extends 'travels/base.html'%}
+
+{% block title %} {{service.title}} {% endblock %}
+
+{% block content %} 
+	
+	<section class="tour">
+		<div class="main__wrapper">
+			<h1>{{service.title}}</h1>
+			<h2>О туре:</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nisi neque blanditiis magnam. Explicabo veniam voluptas quos dolor, rem! Molestiae tempora, ipsam? Nesciunt accusantium, consequatur expedita, dolorem ad molestiae alias rem doloremque repellat sequi voluptatum voluptatem omnis quo provident recusandae maiores?</p>
+			<h2>Забронировать место</h2>
+			<form action="{{service.get_url}}" method="post">
+				{% csrf_token %}
+				{% for field in form %}
+					<div>
+						{{field.label_tag}}
+						{{field.errors}}
+						{{field}}
+					</div>
+				{% endfor %}
+				<button>Отправить</button>
+			</form>
+		</div>
+	</section>
+	
+{% endblock %}

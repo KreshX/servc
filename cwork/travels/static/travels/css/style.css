@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: #0093D0;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  color: #0093D0;
+  font-weight: 700;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  background-color: #0093D0;
+}
+
+.header__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+}
+.header__wrapper a {
+  color: white;
+}
+.header__wrapper .header__exit {
+  padding: 10px 20px;
+  background-color: #F0AB00;
+  border: 1px solid #F0AB00;
+  border-radius: 5px;
+}
+.header__wrapper nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 80px;
+}
+
+.main__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__wrapper ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  align-items: center;
+}
+.main__wrapper .main__link {
+  padding: 10px 20px;
+  border: 1px solid #0093D0;
+  border-radius: 5px;
+}
+
+p {
+  color: #0093D0;
+}
+
+.orders__title {
+  font-weight: 700;
+}
+
+.offers__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 85px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #F0AB00;
+  border: 1px solid #F0AB00;
+  border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+h3, h2 {
+  color: #0093D0;
+}
+
+.offers__link {
+  color: #F0AB00;
+  font-size: 24px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.offers__price {
+  font-weight: 900;
+  font-size: 24px;
+  coLor: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+form button {
+  color: white;
+  background-color: #F0AB00;
+  border: 1px solid #F0AB00;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+a:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,25 @@
+{%extends 'travels/base.html'%}
+
+{% block title %} {{city_offers.name}} {% endblock %}
+
+{% block content %} 
+
+	<section class="offers">
+		<div class="main__wrapper">
+			<h1>Подборка туров по России</h1>
+			<h2>Подборка по городу {{city_offers.name}}</h2>
+			<h3>Средняя цена: {{ agg.price__avg }}</h3>
+			<h3>Максимальная цена: {{ agg.price__max }}</h3>
+			<h3>Минимальная цена: {{ agg.price__min }}</h3>
+			<ul>
+				{% for service in services  %}
+					<li class="offers__item">
+						<a class="offers__link" href="{{service.get_url}}">{{ service.title }}</a>
+						<p class="offers__price">Цена:{{service.price}}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	
+{% endblock %}

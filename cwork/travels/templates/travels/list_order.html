@@ -1,0 +1,23 @@
+{%extends 'travels/base.html'%}
+
+{% block title %} Список заказов {% endblock %}
+
+{% block content %}
+	<section class="orders">
+		<div class="main__wrapper">
+			<h1 class="orders__heading">Заказы для компании...</h1>
+			<p class="orders__count">Всего заказов: {{total}}</p>
+			<ul class="orders__list">
+				{% for order in orders  %}
+					<p class="orders__title">{{order.service}}</p>
+					<p>Имя: {{order.name}}</p>
+					<p>Номер: {{order.number}}</p>
+					<br class="orders__line">
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	
+
+
+{% endblock %}
